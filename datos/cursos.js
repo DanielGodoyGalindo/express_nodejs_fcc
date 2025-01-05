@@ -11,7 +11,7 @@ let infoCursos = {
             id: 2,
             titulo: 'Python intermedio',
             lenguaje: 'python',
-            vistas: 13200,
+            vistas: 18200,
             nivel: 'intermedio'
         },
         {
@@ -39,5 +39,9 @@ let infoCursos = {
     ]
 }
 
-const _infoCursos = infoCursos;
-export { _infoCursos as infoCursos };
+// Exportación: podemos exportar todo el objeto infoCursos o sólo las propiedades que queramos
+// En este caso exporto todo el objeto y además cada una de sus propiedades. De esta manera
+// puedo importar en los routers de matematicas y de programación sólo los cursos de cada materia
+const matematicas = infoCursos;
+const programacion = infoCursos.programacion;
+export { matematicas, programacion, infoCursos };
